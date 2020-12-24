@@ -12,15 +12,20 @@
   }
   &-big {
     width: 175px;
-    &:hover {
-      background: $mainBg;
-      color: $red;
-    }
+  }
+  &-super-big {
+    width: 200px;
+    height: 60px;
+    font-size: 1rem;
   }
   &-red {
     border-radius: 5px;
     background: $red;
     color: $mainBg;
+    &:hover {
+      background: $mainBg;
+      color: $red;
+    }
   }
   &-transparent {
     color: $red;

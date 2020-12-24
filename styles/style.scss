@@ -17,6 +17,12 @@
     align-items: center;
     li {
       margin: 0 1.5rem;
+      a:hover {
+        color: $red;
+      }
+      .sign-in {
+        font-weight: 500;
+      }
       .sign-up {
         margin: 0;
       }
@@ -27,7 +33,7 @@
 // === HERO ===
 
 .hero {
-  margin: 5rem 0;
+  margin: 6rem 0;
   &-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -37,11 +43,7 @@
       flex-direction: column;
       justify-content: center;
       h1 {
-        font-weight: 500;
         margin-bottom: 1rem;
-        span {
-          font-weight: 700;
-        }
       }
       p {
         margin-bottom: 2.5rem;
@@ -55,7 +57,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    margin-top: 5rem;
+    margin-top: 6rem;
     &-item {
       height: 165px;
       position: relative;
@@ -95,14 +97,12 @@
 // Features
 
 .features {
-  margin: 7rem 0;
+  margin: 3rem 0;
+  padding: 3rem 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   &-text {
     margin: auto 0;
-    h1 {
-      font-weight: 600;
-    }
     p {
       margin: 1.5rem 0;
     }
@@ -119,12 +119,12 @@
   }
 }
 
+// Pricings
+
 .pricings {
-  margin: 6rem 0;
+  margin: 3rem 0;
+  padding: 3rem 0;
   text-align: center;
-  p {
-    margin: 1rem 0 2.5rem;
-  }
   .pricing {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -136,7 +136,7 @@
       height: 600px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-around;
       align-items: center;
       img {
         width: 100px;
@@ -158,9 +158,140 @@
           }
         }
       }
+      &-label {
+        h3 {
+          margin-bottom: 1.2rem;
+        }
+      }
     }
     &-item:nth-child(3) {
       border: 3px solid $red;
+    }
+  }
+}
+
+/* Maps */
+.maps {
+  margin: 3rem 0 0;
+  padding-top: 3rem;
+  text-align: center;
+}
+
+/* Clients */
+.clients {
+  display: flex;
+  justify-content: space-between;
+  img {
+    object-fit: contain;
+  }
+}
+
+/* Testimonials */
+.testimonials {
+  margin-bottom: 7rem;
+  padding-top: 3rem;
+  .testimonial {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    &-item {
+      border: 3px solid #e2e2e2f6;
+      border-radius: 5px;
+      padding: 1.5rem;
+      transition: 0.3s;
+      &:hover {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        transform: translateY(-5px);
+        border: 3px solid $red;
+      }
+      &-top {
+        display: flex;
+        margin-bottom: 1rem;
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          margin-right: 1rem;
+        }
+        div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+    }
+    &-item:nth-child(3) {
+      border: 3px solid $red;
+    }
+  }
+}
+
+/* Subscribe */
+.subscribe {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  border-radius: 7px;
+  position: relative;
+  z-index: 9;
+  margin-bottom: -6rem;
+  background: #ffffff;
+  &-text {
+    width: 320px;
+    h2 {
+      margin-bottom: 1rem;
+    }
+  }
+  button {
+    box-shadow: rgba(245, 56, 56, 0.9) 0px 30px 60px -12px,
+      rgba(245, 56, 56, 0.9) 0px 18px 36px -18px;
+  }
+}
+/* Footer */
+footer {
+  padding: 15rem 0 6rem;
+  background: #f8f8f8;
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    &-logo {
+      width: 400px;
+      p {
+        margin: 1rem 0;
+        span {
+          font-weight: 700;
+        }
+      }
+      ul {
+        display: flex;
+        li {
+          width: 50px;
+          height: 50px;
+          text-align: center;
+          line-height: 50px;
+          background: #ffffff;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+            rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          border-radius: 50%;
+          margin-right: 1rem;
+          transition: 0.3s;
+          &:hover {
+            background: $red;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+    &-links {
+      h4 {
+        margin-bottom: 1rem;
+      }
+      ul li {
+        margin-bottom: 1rem;
+      }
     }
   }
 }

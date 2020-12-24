@@ -12,6 +12,7 @@ $font-stack: "Rubik", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -26,6 +27,7 @@ h4,
 h5,
 h6 {
   color: $dark;
+  font-weight: 600;
 }
 
 p {

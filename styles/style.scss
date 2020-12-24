@@ -1,0 +1,53 @@
+@import "config";
+@import "utilities";
+@import "buttons";
+
+// === NAVIGATION ===
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  height: 7rem;
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    li {
+      margin: 0 1.5rem;
+      .sign-up {
+        margin: 0;
+      }
+    }
+  }
+}
+
+// === HERO ===
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 5rem;
+  &-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+      font-weight: 500;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      span {
+        font-weight: 700;
+      }
+    }
+    p {
+      margin-bottom: 2.5rem;
+    }
+    button {
+      box-shadow: rgba(245, 56, 56, 0.7) 0px 25px 80px 0px;
+    }
+  }
+}

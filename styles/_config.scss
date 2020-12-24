@@ -1,0 +1,44 @@
+// Colors
+$mainBg: #ffffff;
+$red: #f53838;
+$green: #2fab73;
+$dark: #0b132a;
+$gray: #4f5665;
+
+// Fonts
+$font-stack: "Rubik", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $mainBg;
+  font-family: $font-stack;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $dark;
+}
+
+p {
+  color: $gray;
+  font-size: 15px;
+  line-height: 26px;
+}
+
+a {
+  text-decoration: none;
+  color: $gray;
+}
+
+ul {
+  list-style: none;
+}

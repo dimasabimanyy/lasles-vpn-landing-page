@@ -1,0 +1,33 @@
+.btn {
+  width: 140px;
+  height: 45px;
+  background: transparent;
+  font-family: $font-stack;
+  border: 2px solid $red;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    transform: translateY(-5px);
+  }
+  &-big {
+    width: 175px;
+    &:hover {
+      background: $mainBg;
+      color: $red;
+    }
+  }
+  &-red {
+    border-radius: 5px;
+    background: $red;
+    color: $mainBg;
+  }
+  &-transparent {
+    color: $red;
+    border-radius: 30px;
+    &:hover {
+      color: $mainBg;
+      background: $red;
+    }
+  }
+}

@@ -7,27 +7,149 @@
 .nav {
   display: flex;
   justify-content: space-between;
-  height: 7rem;
+  align-items: center;
+  height: 12vh;
   .logo {
-    display: flex;
-    align-items: center;
+    margin: auto 0;
   }
-  ul {
+  &-links {
     display: flex;
     align-items: center;
+    z-index: 999;
     li {
       margin: 0 1.5rem;
       a:hover {
         color: $red;
       }
-      .sign-in {
+    }
+    .sign-in {
+      margin-left: 8rem;
+      a {
         font-weight: 500;
       }
-      .sign-up {
-        margin: 0;
+    }
+    .sign-up {
+      margin: 0;
+    }
+  }
+  .hamburger {
+    height: fit-content;
+    display: none;
+  }
+
+  .hamburger .line {
+    width: 40px;
+    height: 3px;
+    background-color: #353535;
+    display: block;
+    margin: 7px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hamburger:hover {
+    cursor: pointer;
+  }
+  #hamburger-11 {
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+  #hamburger-11.is-active {
+    animation: smallbig 0.6s forwards;
+  }
+
+  @keyframes smallbig {
+    0%,
+    100% {
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1);
+    }
+
+    50% {
+      -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+      -o-transform: scale(0);
+      transform: scale(0);
+    }
+  }
+
+  #hamburger-11.is-active .line:nth-child(1),
+  #hamburger-11.is-active .line:nth-child(2),
+  #hamburger-11.is-active .line:nth-child(3) {
+    -webkit-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+  }
+
+  #hamburger-11.is-active .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  #hamburger-11.is-active .line:nth-child(1) {
+    -webkit-transform: translateY(10px) rotate(45deg);
+    -ms-transform: translateY(10px) rotate(45deg);
+    -o-transform: translateY(10px) rotate(45deg);
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  #hamburger-11.is-active .line:nth-child(3) {
+    -webkit-transform: translateY(-10px) rotate(-45deg);
+    -ms-transform: translateY(-10px) rotate(-45deg);
+    -o-transform: translateY(-10px) rotate(-45deg);
+    transform: translateY(-10px) rotate(-45deg);
+  }
+}
+
+/* RESPONSIVE NAVIGATION */
+@media screen and (max-width: 1050px) {
+  .nav {
+    &-links {
+      .sign-in {
+        margin-left: 1rem;
       }
     }
   }
+}
+
+@media screen and (max-width: 950px) {
+  .nav {
+    &-links {
+      position: absolute;
+      width: 50%;
+      right: 0;
+      height: 88vh;
+      top: 12vh;
+      background-color: #ffffff;
+      flex-direction: column;
+      justify-content: space-around;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+    }
+    .hamburger {
+      display: block;
+    }
+  }
+}
+
+.nav-active {
+  transform: translateX(0);
+}
+
+.toggle div:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 8px);
+}
+
+.toggle div:nth-child(2) {
+  opacity: 0;
+}
+
+.toggle div:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -8px);
 }
 
 // === HERO ===
@@ -237,9 +359,9 @@
         }
       }
     }
-    &-item:nth-child(3) {
-      border: 3px solid $red;
-    }
+    // &-item:nth-child(3) {
+    //   border: 3px solid $red;
+    // }
   }
 }
 
@@ -249,8 +371,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 3rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 7px;
   position: relative;
   z-index: 9;
@@ -273,7 +394,7 @@ footer {
   background: #f8f8f8;
   .footer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 2rem;
     &-logo {
       // width: 400px;
@@ -304,6 +425,11 @@ footer {
       }
     }
     &-links {
+      display: flex;
+      justify-content: flex-end;
+      div {
+        width: fit-content;
+      }
       h4 {
         margin-bottom: 1rem;
       }
@@ -319,9 +445,6 @@ footer {
     text-align: center;
     padding: 4rem 0 3rem;
     color: $gray;
-    a:hover {
-      color: $red;
-    }
   }
 }
 

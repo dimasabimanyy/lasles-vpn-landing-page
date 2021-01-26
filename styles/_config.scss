@@ -18,6 +18,7 @@ $font-stack: "Rubik", sans-serif;
 body {
   background: $mainBg;
   font-family: $font-stack;
+  overflow-x: hidden;
 }
 
 h1,

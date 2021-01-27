@@ -235,11 +235,11 @@ h6 {
   cursor: pointer;
 }
 
-.nav #hamburger-11 {
+.nav #hamburger {
   transition: all 0.3s ease-in-out;
 }
 
-.nav #hamburger-11.is-active {
+.nav #hamburger.is-active {
   animation: smallbig 0.6s forwards;
 }
 
@@ -253,21 +253,21 @@ h6 {
   }
 }
 
-.nav #hamburger-11.is-active .line:nth-child(1),
-.nav #hamburger-11.is-active .line:nth-child(2),
-.nav #hamburger-11.is-active .line:nth-child(3) {
+.nav #hamburger.is-active .line:nth-child(1),
+.nav #hamburger.is-active .line:nth-child(2),
+.nav #hamburger.is-active .line:nth-child(3) {
   transition-delay: 0.2s;
 }
 
-.nav #hamburger-11.is-active .line:nth-child(2) {
+.nav #hamburger.is-active .line:nth-child(2) {
   opacity: 0;
 }
 
-.nav #hamburger-11.is-active .line:nth-child(1) {
+.nav #hamburger.is-active .line:nth-child(1) {
   transform: translateY(10px) rotate(45deg);
 }
 
-.nav #hamburger-11.is-active .line:nth-child(3) {
+.nav #hamburger.is-active .line:nth-child(3) {
   transform: translateY(-10px) rotate(-45deg);
 }
 
